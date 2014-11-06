@@ -683,7 +683,9 @@
                         </webPreferences>
                         <connections>
                             <outlet property="UIDelegate" destination="Voe-Tx-rLC" id="8Iy-3M-ozK"/>
+                            <outlet property="frameLoadDelegate" destination="Voe-Tx-rLC" id="5FS-Ht-NEL"/>
                             <outlet property="policyDelegate" destination="Voe-Tx-rLC" id="G1u-rp-FV3"/>
+                            <outlet property="resourceLoadDelegate" destination="Voe-Tx-rLC" id="eDO-gz-ZS2"/>
                         </connections>
                     </webView>
                 </subviews>

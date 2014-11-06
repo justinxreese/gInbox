@@ -8,11 +8,12 @@
 
 #import <Cocoa/Cocoa.h>
 #import <WebKit/WebKit.h>
+#import "Utils.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
-@property (assign) IBOutlet NSWindow *window;
-@property (assign) IBOutlet WebView *webView;
+@property (nonatomic, retain) IBOutlet NSWindow *window;
+@property (nonatomic, retain) IBOutlet WebView *webView;
 
 @end
 

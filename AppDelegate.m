@@ -10,13 +10,13 @@
 
 @implementation AppDelegate
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+- (void) applicationDidFinishLaunching:(NSNotification*) aNotification {
     // init variables
-    NSWindow *window = [self window];
-    WebView *webView = [self webView];
+    NSWindow* window = [self window];
+    WebView* webView = [self webView];
     
-    NSURL *url = [NSURL URLWithString:@"https://inbox.google.com/"];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    NSURL* url = [NSURL URLWithString:@"https://inbox.google.com/"];
+    NSURLRequest* request = [NSURLRequest requestWithURL:url];
     
     // reposition window
     //[self repositionWindow:window toSize:CGSizeMake(1000.0, 600.0)];
@@ -34,30 +34,16 @@
     [webView setGroupName:@"gInbox"];
     
     
-    // http://stackoverflow.com/questions/15949606/how-can-i-listen-to-notifications
+    // http://stackoverflow.com/questions/11730986/inject-custom-css-and-javascript-into-webview
     // TODO: make this work ^
 }
 
-- (void)applicationWillTerminate:(NSNotification *)aNotification {
+- (void) applicationWillTerminate:(NSNotification*) aNotification {
     // Insert code here to tear down your application
 }
 
-- (void)repositionWindow:(NSWindow *)window toSize:(CGSize)frameSize
-{
-    NSRect frame = [window frame];
-    // set window title, size & origin
-    frame.origin.y -= frame.size.height;
-    frame.origin.y += frameSize.height;
-    frame.origin.x = 0;
-    
-    frame.size = frameSize;
-    
-    [window setFrame: frame display: YES animate: NO];
-}
-
-
 // keep window open in background
-- (BOOL)applicationShouldHandleReopen:(NSApplication *)sender hasVisibleWindows:(BOOL)flag
+- (BOOL) applicationShouldHandleReopen:(NSApplication*) sender hasVisibleWindows:(BOOL) flag
 {
     if (flag) {
         [[self window] orderFront:self];
@@ -69,10 +55,10 @@
 }
 
 // open links in default browser
--(void)webView:(WebView *)sender
-    decidePolicyForNavigationAction:(NSDictionary *)actionInformation
-    request:(NSURLRequest *)request frame:(WebFrame *)frame
-    decisionListener:(id < WebPolicyDecisionListener >)listener
+-                (void) webView:(WebView*) sender
+decidePolicyForNavigationAction:(NSDictionary*) actionInformation
+                        request:(NSURLRequest*) request frame:(WebFrame*) frame
+               decisionListener:(id <WebPolicyDecisionListener>)listener
 {
     // check if the sender is our webview (not sure why this is needed? objective c is weird. maybe i don't actually need it...
     if (![sender isEqual:[self webView]]) {
@@ -86,9 +72,29 @@
 }
 
 // new window policy
-- (void)webView:(WebView *)sender decidePolicyForNewWindowAction:(NSDictionary *)actionInformation request:(NSURLRequest *)request newFrameName:(NSString *)frameName decisionListener:(id<WebPolicyDecisionListener>)listener {
+- (void)               webView:(WebView*) sender
+decidePolicyForNewWindowAction:(NSDictionary*) actionInformation
+                       request:(NSURLRequest* )request
+                  newFrameName:(NSString*) frameName
+              decisionListener:(id<WebPolicyDecisionListener>) listener
+{
     [[NSWorkspace sharedWorkspace] openURL:[actionInformation objectForKey:WebActionOriginalURLKey]];
     [listener ignore];
+}
+
+- (void)webView:(WebView*)sender didFinishLoadForFrame:(WebFrame *)frame
+{
+    if (frame == [sender mainFrame])
+    {
+        if ([frame DOMDocument] != nil) {
+            NSString* jsFileContent = [Utils readFileIntoNSString:@"gInbox"
+                                                           ofType:@"js"
+                                                      inDirectory:@"Assets"];
+            
+            [Utils injectJSStringIntoWebView:sender JSString:jsFileContent];
+        }
+    }
+    
 }
 
 @end
