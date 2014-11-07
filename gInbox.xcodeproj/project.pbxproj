@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		110795C91A0BE63500B85DF4 /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = 110795C81A0BE63500B85DF4 /* Assets */; };
 		110795CB1A0BFD3100B85DF4 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 110795CA1A0BFD3100B85DF4 /* Utils.m */; };
+		114ADBFE1A0D3189001E0DF8 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 114ADBFD1A0D3189001E0DF8 /* MainMenu.xib */; };
 		116585121A0A523F005D5596 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 116585111A0A523F005D5596 /* AppDelegate.m */; };
 		116585141A0A523F005D5596 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 116585131A0A523F005D5596 /* main.m */; };
 		116585161A0A523F005D5596 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 116585151A0A523F005D5596 /* Images.xcassets */; };
@@ -20,7 +21,6 @@
 		11C0847B1A0D56160063B791 /* Sparkle.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = 11C084781A0D55BF0063B791 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		11C0847E1A0D57D80063B791 /* appcast.rss in Resources */ = {isa = PBXBuildFile; fileRef = 11C0847D1A0D57D80063B791 /* appcast.rss */; };
 		11C084801A0D5B8A0063B791 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11C0847F1A0D5B8A0063B791 /* MainMenu.xib */; };
-		11C634AE1A0A99A6008FF48F /* inbox-google.png in Resources */ = {isa = PBXBuildFile; fileRef = 11C634AD1A0A99A6008FF48F /* inbox-google.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +51,7 @@
 		110795C81A0BE63500B85DF4 /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Assets; path = gInbox/Assets; sourceTree = "<group>"; };
 		110795CA1A0BFD3100B85DF4 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		110795CC1A0BFEEC00B85DF4 /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		114ADBFD1A0D3189001E0DF8 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		1165850B1A0A523F005D5596 /* Inbox by Google.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Inbox by Google.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1165850F1A0A523F005D5596 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		116585101A0A523F005D5596 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -67,7 +68,6 @@
 		11C084781A0D55BF0063B791 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		11C0847D1A0D57D80063B791 /* appcast.rss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = appcast.rss; sourceTree = "<group>"; };
 		11C0847F1A0D5B8A0063B791 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
-		11C634AD1A0A99A6008FF48F /* inbox-google.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "inbox-google.png"; path = "../../../Pictures/inbox-google.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,13 +114,12 @@
 		1165850D1A0A523F005D5596 /* gInbox */ = {
 			isa = PBXGroup;
 			children = (
-				116DD6431A0CFFA0008B724B /* Sources */,
-				116DD6441A0CFFB8008B724B /* MainWindow */,
-				116DD6451A0CFFC4008B724B /* SettingsWindow */,
+				114ADBFD1A0D3189001E0DF8 /* MainMenu.xib */,
+				116585101A0A523F005D5596 /* AppDelegate.h */,
+				116585111A0A523F005D5596 /* AppDelegate.m */,
 				110795CC1A0BFEEC00B85DF4 /* Utils.h */,
 				110795CA1A0BFD3100B85DF4 /* Utils.m */,
 				116585151A0A523F005D5596 /* Images.xcassets */,
-				11C634AD1A0A99A6008FF48F /* inbox-google.png */,
 				1165850E1A0A523F005D5596 /* Supporting Files */,
 			);
 			path = gInbox;
@@ -261,7 +260,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11C634AE1A0A99A6008FF48F /* inbox-google.png in Resources */,
 				110795C91A0BE63500B85DF4 /* Assets in Resources */,
 				11C0847E1A0D57D80063B791 /* appcast.rss in Resources */,
 				116585161A0A523F005D5596 /* Images.xcassets in Resources */,
