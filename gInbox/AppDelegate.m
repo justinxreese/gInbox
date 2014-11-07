@@ -10,32 +10,26 @@
 
 @implementation AppDelegate
 
+    // Constants
+    NSString *const WebURL = @"https://inbox.google.com";
+    NSString *const WebUserAgent = @"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.111 Safari/537.36";
+
 - (void) applicationDidFinishLaunching:(NSNotification*) aNotification {
     // init variables
-    NSWindow* window = [self window];
-    WebView* webView = [self webView];
-    
-    NSURL* url = [NSURL URLWithString:@"https://inbox.google.com/"];
+    NSURL* url = [NSURL URLWithString:WebURL];
     NSURLRequest* request = [NSURLRequest requestWithURL:url];
     
     // reposition window
     //[self repositionWindow:window toSize:CGSizeMake(1000.0, 600.0)];
     
     // set title
-    [window setTitle:@"Inbox by Google"];
+    [_window setTitle:[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleDisplayName"]];
     
     // load url
-    [webView setCustomUserAgent:
-     @"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.111 Safari/537.36"];
-    [[webView mainFrame] loadRequest:request];
+    [_webView setCustomUserAgent:WebUserAgent];
+    [[_webView mainFrame] loadRequest:request];
     
-    //[webView setUIDelegate:self];
-    //[webView setPolicyDelegate:self];
-    [webView setGroupName:@"gInbox"];
-    
-    
-    // http://stackoverflow.com/questions/11730986/inject-custom-css-and-javascript-into-webview
-    // TODO: make this work ^
+    [_webView setGroupName:@"gInbox"];
 }
 
 - (void) applicationWillTerminate:(NSNotification*) aNotification {
@@ -95,6 +89,13 @@ decidePolicyForNewWindowAction:(NSDictionary*) actionInformation
         }
     }
     
+}
+
+// open preferences window
+- (IBAction)openSettings:(id)senderId
+{
+    _settingsWindow = [[Settings alloc] initWithWindowNibName:@"Settings"];
+    [_settingsWindow showWindow:self];
 }
 
 @end
