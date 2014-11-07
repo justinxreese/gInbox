@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "gInbox/AppDelegate.m"
-            timestampString = "436998983.415059"
+            timestampString = "437065217.803076"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
             landmarkName = "-webView:didFinishLoadForFrame:"
             landmarkType = "5">
          </BreakpointContent>
