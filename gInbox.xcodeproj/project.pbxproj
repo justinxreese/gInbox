@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		110795C91A0BE63500B85DF4 /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = 110795C81A0BE63500B85DF4 /* Assets */; };
 		110795CB1A0BFD3100B85DF4 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 110795CA1A0BFD3100B85DF4 /* Utils.m */; };
-		114ADBFE1A0D3189001E0DF8 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 114ADBFD1A0D3189001E0DF8 /* MainMenu.xib */; };
 		116585121A0A523F005D5596 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 116585111A0A523F005D5596 /* AppDelegate.m */; };
 		116585141A0A523F005D5596 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 116585131A0A523F005D5596 /* main.m */; };
 		116585161A0A523F005D5596 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 116585151A0A523F005D5596 /* Images.xcassets */; };
@@ -17,6 +16,8 @@
 		1165852F1A0A7C0A005D5596 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1165852E1A0A7C0A005D5596 /* WebKit.framework */; };
 		116DD63F1A0CF19C008B724B /* Settings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 116DD63E1A0CF19C008B724B /* Settings.xib */; };
 		116DD6421A0CFF90008B724B /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 116DD6411A0CFF90008B724B /* Settings.m */; };
+		11B7E55E1A0D633E00F8F21F /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B7E55B1A0D633E00F8F21F /* Settings.m */; };
+		11B7E55F1A0D633E00F8F21F /* Settings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11B7E55C1A0D633E00F8F21F /* Settings.xib */; };
 		11C084791A0D55BF0063B791 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11C084781A0D55BF0063B791 /* Sparkle.framework */; };
 		11C0847B1A0D56160063B791 /* Sparkle.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = 11C084781A0D55BF0063B791 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		11C0847E1A0D57D80063B791 /* appcast.rss in Resources */ = {isa = PBXBuildFile; fileRef = 11C0847D1A0D57D80063B791 /* appcast.rss */; };
@@ -63,8 +64,10 @@
 		116585241A0A523F005D5596 /* gInboxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = gInboxTests.m; sourceTree = "<group>"; };
 		1165852E1A0A7C0A005D5596 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		116DD63E1A0CF19C008B724B /* Settings.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Settings.xib; sourceTree = "<group>"; };
-		116DD6401A0CFF90008B724B /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
 		116DD6411A0CFF90008B724B /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
+		11B7E55A1A0D633E00F8F21F /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
+		11B7E55B1A0D633E00F8F21F /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
+		11B7E55C1A0D633E00F8F21F /* Settings.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Settings.xib; sourceTree = "<group>"; };
 		11C084781A0D55BF0063B791 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		11C0847D1A0D57D80063B791 /* appcast.rss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = appcast.rss; sourceTree = "<group>"; };
 		11C0847F1A0D5B8A0063B791 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
@@ -114,9 +117,8 @@
 		1165850D1A0A523F005D5596 /* gInbox */ = {
 			isa = PBXGroup;
 			children = (
-				114ADBFD1A0D3189001E0DF8 /* MainMenu.xib */,
-				116585101A0A523F005D5596 /* AppDelegate.h */,
-				116585111A0A523F005D5596 /* AppDelegate.m */,
+				11B7E5601A0D635500F8F21F /* Settings */,
+				11B7E5611A0D635C00F8F21F /* MainMenu */,
 				110795CC1A0BFEEC00B85DF4 /* Utils.h */,
 				110795CA1A0BFD3100B85DF4 /* Utils.m */,
 				116585151A0A523F005D5596 /* Images.xcassets */,
@@ -152,31 +154,24 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		116DD6431A0CFFA0008B724B /* Sources */ = {
+		11B7E5601A0D635500F8F21F /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				11B7E55A1A0D633E00F8F21F /* Settings.h */,
+				11B7E55B1A0D633E00F8F21F /* Settings.m */,
+				11B7E55C1A0D633E00F8F21F /* Settings.xib */,
 			);
-			name = Sources;
+			name = Settings;
 			sourceTree = "<group>";
 		};
-		116DD6441A0CFFB8008B724B /* MainWindow */ = {
+		11B7E5611A0D635C00F8F21F /* MainMenu */ = {
 			isa = PBXGroup;
 			children = (
-				11C0847F1A0D5B8A0063B791 /* MainMenu.xib */,
+				114ADBFD1A0D3189001E0DF8 /* MainMenu.xib */,
 				116585101A0A523F005D5596 /* AppDelegate.h */,
 				116585111A0A523F005D5596 /* AppDelegate.m */,
 			);
-			name = MainWindow;
-			sourceTree = "<group>";
-		};
-		116DD6451A0CFFC4008B724B /* SettingsWindow */ = {
-			isa = PBXGroup;
-			children = (
-				116DD63E1A0CF19C008B724B /* Settings.xib */,
-				116DD6401A0CFF90008B724B /* Settings.h */,
-				116DD6411A0CFF90008B724B /* Settings.m */,
-			);
-			name = SettingsWindow;
+			name = MainMenu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +259,7 @@
 				11C0847E1A0D57D80063B791 /* appcast.rss in Resources */,
 				116585161A0A523F005D5596 /* Images.xcassets in Resources */,
 				116DD63F1A0CF19C008B724B /* Settings.xib in Resources */,
+				11B7E55F1A0D633E00F8F21F /* Settings.xib in Resources */,
 				11C084801A0D5B8A0063B791 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,6 +280,7 @@
 			files = (
 				110795CB1A0BFD3100B85DF4 /* Utils.m in Sources */,
 				116585141A0A523F005D5596 /* main.m in Sources */,
+				11B7E55E1A0D633E00F8F21F /* Settings.m in Sources */,
 				116DD6421A0CFF90008B724B /* Settings.m in Sources */,
 				116585121A0A523F005D5596 /* AppDelegate.m in Sources */,
 			);
