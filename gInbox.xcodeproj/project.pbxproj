@@ -15,7 +15,6 @@
 		116585161A0A523F005D5596 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 116585151A0A523F005D5596 /* Images.xcassets */; };
 		116585251A0A523F005D5596 /* gInboxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 116585241A0A523F005D5596 /* gInboxTests.m */; };
 		1165852F1A0A7C0A005D5596 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1165852E1A0A7C0A005D5596 /* WebKit.framework */; };
-		11C634AE1A0A99A6008FF48F /* inbox-google.png in Resources */ = {isa = PBXBuildFile; fileRef = 11C634AD1A0A99A6008FF48F /* inbox-google.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +42,6 @@
 		116585231A0A523F005D5596 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		116585241A0A523F005D5596 /* gInboxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = gInboxTests.m; sourceTree = "<group>"; };
 		1165852E1A0A7C0A005D5596 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
-		11C634AD1A0A99A6008FF48F /* inbox-google.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "inbox-google.png"; path = "../../../Pictures/inbox-google.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +92,6 @@
 				110795CC1A0BFEEC00B85DF4 /* Utils.h */,
 				110795CA1A0BFD3100B85DF4 /* Utils.m */,
 				116585151A0A523F005D5596 /* Images.xcassets */,
-				11C634AD1A0A99A6008FF48F /* inbox-google.png */,
 				1165850E1A0A523F005D5596 /* Supporting Files */,
 			);
 			path = gInbox;
@@ -206,7 +203,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11C634AE1A0A99A6008FF48F /* inbox-google.png in Resources */,
 				110795C91A0BE63500B85DF4 /* Assets in Resources */,
 				116585161A0A523F005D5596 /* Images.xcassets in Resources */,
 				114ADBFE1A0D3189001E0DF8 /* MainMenu.xib in Resources */,
