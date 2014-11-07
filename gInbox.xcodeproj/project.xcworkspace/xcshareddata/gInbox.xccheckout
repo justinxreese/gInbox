@@ -6,15 +6,19 @@
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>1221E6CA-C240-4561-862F-0C4E1FCFF7F4</string>
+	<key>IDESourceControlProjectName</key>
+	<string>gInbox</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>CFB14032BB365D34A33CB7D82A27BCBB84947EA0</key>
 		<string>https://github.com/chenasraf/gInbox.git</string>
 	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>gInbox.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>CFB14032BB365D34A33CB7D82A27BCBB84947EA0</key>
-		<string>gInbox/</string>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/chenasraf/gInbox.git</string>

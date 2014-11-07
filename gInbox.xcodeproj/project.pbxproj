@@ -12,7 +12,6 @@
 		116585121A0A523F005D5596 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 116585111A0A523F005D5596 /* AppDelegate.m */; };
 		116585141A0A523F005D5596 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 116585131A0A523F005D5596 /* main.m */; };
 		116585161A0A523F005D5596 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 116585151A0A523F005D5596 /* Images.xcassets */; };
-		116585191A0A523F005D5596 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 116585171A0A523F005D5596 /* MainMenu.xib */; };
 		116585251A0A523F005D5596 /* gInboxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 116585241A0A523F005D5596 /* gInboxTests.m */; };
 		1165852F1A0A7C0A005D5596 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1165852E1A0A7C0A005D5596 /* WebKit.framework */; };
 		11C634AE1A0A99A6008FF48F /* inbox-google.png in Resources */ = {isa = PBXBuildFile; fileRef = 11C634AD1A0A99A6008FF48F /* inbox-google.png */; };
@@ -38,7 +37,6 @@
 		116585111A0A523F005D5596 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		116585131A0A523F005D5596 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		116585151A0A523F005D5596 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		116585181A0A523F005D5596 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		1165851E1A0A523F005D5596 /* gInboxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = gInboxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		116585231A0A523F005D5596 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		116585241A0A523F005D5596 /* gInboxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = gInboxTests.m; sourceTree = "<group>"; };
@@ -94,7 +92,6 @@
 				110795CA1A0BFD3100B85DF4 /* Utils.m */,
 				116585151A0A523F005D5596 /* Images.xcassets */,
 				11C634AD1A0A99A6008FF48F /* inbox-google.png */,
-				116585171A0A523F005D5596 /* MainMenu.xib */,
 				1165850E1A0A523F005D5596 /* Supporting Files */,
 			);
 			path = gInbox;
@@ -209,7 +206,6 @@
 				11C634AE1A0A99A6008FF48F /* inbox-google.png in Resources */,
 				110795C91A0BE63500B85DF4 /* Assets in Resources */,
 				116585161A0A523F005D5596 /* Images.xcassets in Resources */,
-				116585191A0A523F005D5596 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,17 +246,6 @@
 			targetProxy = 1165851F1A0A523F005D5596 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		116585171A0A523F005D5596 /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				116585181A0A523F005D5596 /* Base */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		116585261A0A523F005D5596 /* Debug */ = {
@@ -346,6 +331,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = gInbox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "Inbox by Google";
 			};
 			name = Debug;
@@ -357,6 +343,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = gInbox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "Inbox by Google";
 			};
 			name = Release;
