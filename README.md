@@ -9,10 +9,17 @@ Currently it only acts as a windowed-tab, that unlike Google Chrome in app mode,
 
 Feel free to open requests and issues in the repository.
 
-Upcoming features:
+Upcoming features
 ==================
 
 1. OS XNotifications for new email
 1. Muting Hangouts messages in window
 1. Opening Messages.app instead of Hangouts
 1. OS X themes
+
+How to Install
+==============
+
+1. Download the latest version via the [releases](https://github.com/chenasraf/gInbox/releases) page
+2. Drag & Drop into your `/Applications` folder
+3. Launch!
