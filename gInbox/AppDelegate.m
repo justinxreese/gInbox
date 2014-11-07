@@ -91,4 +91,11 @@ decidePolicyForNewWindowAction:(NSDictionary*) actionInformation
     
 }
 
+// open preferences window
+- (IBAction)openSettings:(id)senderId
+{
+    _settingsWindow = [[Settings alloc] initWithWindowNibName:@"Settings"];
+    [_settingsWindow showWindow:self];
+}
+
 @end

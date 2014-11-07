@@ -36,7 +36,7 @@
                                         <matrix verticalHuggingPriority="750" fixedFrame="YES" allowsEmptySelection="NO" autorecalculatesCellSize="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UTb-qM-UEO">
                                             <rect key="frame" x="17" y="177" width="499" height="58"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                            <size key="cellSize" width="499" height="18"/>
+                                            <size key="cellSize" width="413" height="18"/>
                                             <size key="intercellSpacing" width="4" height="2"/>
                                             <buttonCell key="prototype" type="radio" title="Radio" imagePosition="left" alignment="left" inset="2" id="IY9-fn-14g" userLabel="I">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -48,11 +48,11 @@
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
-                                                    <buttonCell type="radio" title="Messages.app: Hangouts button should open the Messages.app on OS X and Hangouts conversations should be hidden" imagePosition="left" alignment="left" state="on" inset="2" id="GIR-nk-e4W">
+                                                    <buttonCell type="radio" title="Messages.app: Use Messages.app instead of Hangouts" imagePosition="left" alignment="left" inset="2" id="GIR-nk-e4W">
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
-                                                    <buttonCell type="radio" title="Disabled: Hangouts button and conversations will be completely removed from Inbox." imagePosition="left" alignment="left" inset="2" id="Zxk-Ko-Ljp">
+                                                    <buttonCell type="radio" title="Disabled: Hangouts button and conversations will be removed." imagePosition="left" alignment="left" inset="2" id="Zxk-Ko-Ljp">
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>

@@ -15,9 +15,12 @@
 
 @property (nonatomic, retain) IBOutlet NSWindow *window;
 @property (nonatomic, retain) IBOutlet WebView *webView;
+@property (nonatomic, retain) Settings *settingsWindow;
 
 extern NSString *const WebURL;
 extern NSString *const WebUserAgent;
+
+-(IBAction)openSettings:(id)senderId;
 
 @end
 

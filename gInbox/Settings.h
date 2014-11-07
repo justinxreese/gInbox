@@ -10,8 +10,6 @@
 
 @interface Settings : NSWindowController <NSApplicationDelegate>
 
--(IBAction)openSettings:(id)senderId;
-
 @property (nonatomic, retain) Settings *thisWindow;
 
 @end
