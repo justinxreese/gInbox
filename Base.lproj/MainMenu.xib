@@ -670,14 +670,14 @@
         </menu>
         <window title="gInbox" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
-            <rect key="contentRect" x="335" y="390" width="1000" height="700"/>
+            <rect key="contentRect" x="280" y="77" width="1000" height="600"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
-            <view key="contentView" id="EiT-Mj-1SZ">
-                <rect key="frame" x="0.0" y="0.0" width="1000" height="700"/>
+            <view key="contentView" wantsLayer="YES" id="EiT-Mj-1SZ">
+                <rect key="frame" x="0.0" y="0.0" width="1000" height="600"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <webView translatesAutoresizingMaskIntoConstraints="NO" id="sDI-uK-6ow">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="700"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="600"/>
                         <webPreferences key="preferences" defaultFontSize="12" defaultFixedFontSize="12">
                             <nil key="identifier"/>
                         </webPreferences>
@@ -690,13 +690,13 @@
                     </webView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="sDI-uK-6ow" secondAttribute="trailing" id="BN4-N3-WyP"/>
-                    <constraint firstItem="sDI-uK-6ow" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" id="UQk-z4-SIZ"/>
-                    <constraint firstAttribute="bottom" secondItem="sDI-uK-6ow" secondAttribute="bottom" id="dgq-1f-iY4"/>
-                    <constraint firstItem="sDI-uK-6ow" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" id="s2A-pY-IaE"/>
+                    <constraint firstAttribute="bottom" secondItem="sDI-uK-6ow" secondAttribute="bottom" id="icP-9E-xBW"/>
+                    <constraint firstAttribute="trailing" secondItem="sDI-uK-6ow" secondAttribute="trailing" id="o5G-Oo-rlQ"/>
+                    <constraint firstItem="sDI-uK-6ow" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" id="rvi-AW-Hkd"/>
+                    <constraint firstItem="sDI-uK-6ow" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" id="vgc-qs-3I7"/>
                 </constraints>
             </view>
-            <point key="canvasLocation" x="-209" y="-94"/>
+            <point key="canvasLocation" x="-990" y="-657"/>
         </window>
     </objects>
 </document>
