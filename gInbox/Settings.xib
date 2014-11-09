@@ -59,6 +59,9 @@
                                                     </buttonCell>
                                                 </column>
                                             </cells>
+                                            <connections>
+                                                <binding destination="QMh-BF-GK2" name="selectedIndex" keyPath="values.hangoutsMode" id="Aff-Zr-fVF"/>
+                                            </connections>
                                         </matrix>
                                     </subviews>
                                 </view>
@@ -81,5 +84,20 @@
             </view>
             <point key="canvasLocation" x="359.5" y="221.5"/>
         </window>
+        <segmentedControl verticalHuggingPriority="750" id="5Op-RP-Pcb">
+            <rect key="frame" x="0.0" y="0.0" width="104" height="24"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="M2F-F7-V17">
+                <font key="font" metaFont="system"/>
+                <segments>
+                    <segment width="32"/>
+                    <segment width="32" selected="YES" tag="1"/>
+                    <segment width="32">
+                        <nil key="label"/>
+                    </segment>
+                </segments>
+            </segmentedCell>
+        </segmentedControl>
+        <userDefaultsController representsSharedInstance="YES" id="QMh-BF-GK2"/>
     </objects>
 </document>

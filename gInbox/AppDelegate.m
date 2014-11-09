@@ -19,9 +19,6 @@
     NSURL* url = [NSURL URLWithString:WebURL];
     NSURLRequest* request = [NSURLRequest requestWithURL:url];
     
-    // reposition window
-    //[self repositionWindow:window toSize:CGSizeMake(1000.0, 600.0)];
-    
     // set title
     [_window setTitle:[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleDisplayName"]];
     
@@ -48,20 +45,24 @@
     return YES;
 }
 
-// open links in default browser
--                (void) webView:(WebView*) sender
-decidePolicyForNavigationAction:(NSDictionary*) actionInformation
-                        request:(NSURLRequest*) request frame:(WebFrame*) frame
-               decisionListener:(id <WebPolicyDecisionListener>)listener
+- (void)                webView:(WebView*) sender
+decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction
+                decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler
 {
-    // check if the sender is our webview (not sure why this is needed? objective c is weird. maybe i don't actually need it...
-    if (![sender isEqual:[self webView]]) {
-        // open in "new window" policy
-        [[NSWorkspace sharedWorkspace] openURL:[actionInformation objectForKey:WebActionOriginalURLKey]];
-        [listener ignore];
-    } else {
-        // open in current browser (named anchors, listener links... etc)
-        [listener use];
+    if (sender != self.webView) {
+        decisionHandler(WKNavigationActionPolicyAllow);
+        return;
+    }
+    
+    //NSApplication *app = [NSApplication sharedApplication];
+    NSURL *url = navigationAction.request.URL;
+    
+    if (!navigationAction.targetFrame) {
+        // stub
+    }
+    
+    if ([url.scheme isEqualToString:@"#"]) {
+        return;
     }
 }
 
@@ -78,17 +79,46 @@ decidePolicyForNewWindowAction:(NSDictionary*) actionInformation
 
 - (void)webView:(WebView*)sender didFinishLoadForFrame:(WebFrame *)frame
 {
-    if (frame == [sender mainFrame])
+    if (frame == [frame findFrameNamed:@"_top"])
     {
         if ([frame DOMDocument] != nil) {
-            NSString* jsFileContent = [Utils readFileIntoNSString:@"gInbox"
+            
+            // init webscript
+            WebScriptObject *scriptObject = [sender windowScriptObject];
+            [scriptObject setValue:self forKey:@"gInbox"];
+            [scriptObject evaluateWebScript:@"console = { log: function(msg) { gInbox.consoleLog_(msg); } }"];
+            
+            // inject gInboxTweaks.js
+            NSString* jsFileContent = [Utils readFileIntoNSString:@"gInboxTweaks"
                                                            ofType:@"js"
                                                       inDirectory:@"Assets"];
-            
             [Utils injectJSStringIntoWebView:sender JSString:jsFileContent];
+            
+            // after injecting methods, call them with appended parameters
+            [scriptObject evaluateWebScript:[NSString stringWithFormat:@"updateHangoutsMode(%@);", [self getPreference:@"hangoutsMode"]]];
         }
     }
     
+}
+
+- (void) consoleLog:(NSString *)message {
+    NSLog(@"[JSLog] > %@", message);
+}
+
++ (BOOL) isSelectorExcludedFromWebScript:(SEL)selector
+{
+    if (selector == @selector(consoleLog:)) {
+        return NO;
+    }
+    return YES;
+}
+
+// get preference
+- (id)getPreference:(NSString *)key
+{
+    
+    NSUserDefaultsController *userDefaults = [[NSUserDefaultsController sharedUserDefaultsController] values];
+    return [userDefaults valueForKey:key];
 }
 
 // open preferences window

@@ -8,7 +8,9 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface Settings : NSWindowController <NSApplicationDelegate>
+@interface Settings : NSWindowController <NSApplicationDelegate> {
+    NSInteger hangoutsMode;
+}
 
 @property (nonatomic, retain) Settings *thisWindow;
 

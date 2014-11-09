@@ -17,5 +17,6 @@
                         inDirectory:(NSString*)directory;
 + (void) injectJSStringIntoWebView:(WebView*) webView JSString:(NSString*) jsString;
 + (void) injectCSSStringIntoWebView:(WebView*) webView CSSString:(NSString*) cssString;
++ (NSString *) concatStr:(id) first, ...;
 
 @end

@@ -12,8 +12,9 @@
 
 - (void)windowDidLoad {
     [super windowDidLoad];
-    
-    // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
+    NSUserDefaultsController *userDefaults = [[NSUserDefaultsController sharedUserDefaultsController] values];
+    NSUserDefaults *hangoutsMode1 = [userDefaults valueForKey:@"hangoutsMode"];
+    NSLog(@"%@", hangoutsMode1);
 }
 
 @end

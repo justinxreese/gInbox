@@ -17,6 +17,7 @@
 		11B7E5751A0D648400F8F21F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11B7E5731A0D648400F8F21F /* MainMenu.xib */; };
 		11B7E5781A0D649000F8F21F /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B7E5771A0D649000F8F21F /* Utils.m */; };
 		11B7E57A1A0D655500F8F21F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B7E5791A0D655500F8F21F /* main.m */; };
+		11B7E58F1A0E59E700F8F21F /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 11B7E58E1A0E59E700F8F21F /* Settings.plist */; };
 		11C084791A0D55BF0063B791 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11C084781A0D55BF0063B791 /* Sparkle.framework */; };
 		11C0847B1A0D56160063B791 /* Sparkle.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = 11C084781A0D55BF0063B791 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		11C0847E1A0D57D80063B791 /* appcast.rss in Resources */ = {isa = PBXBuildFile; fileRef = 11C0847D1A0D57D80063B791 /* appcast.rss */; };
@@ -64,6 +65,7 @@
 		11B7E5761A0D649000F8F21F /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		11B7E5771A0D649000F8F21F /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		11B7E5791A0D655500F8F21F /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		11B7E58E1A0E59E700F8F21F /* Settings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Settings.plist; sourceTree = "<group>"; };
 		11C084781A0D55BF0063B791 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		11C0847D1A0D57D80063B791 /* appcast.rss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = appcast.rss; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -113,9 +115,6 @@
 			isa = PBXGroup;
 			children = (
 				11B7E5601A0D635500F8F21F /* Settings */,
-				11B7E56C1A0D646800F8F21F /* Settings.h */,
-				11B7E56D1A0D646800F8F21F /* Settings.m */,
-				11B7E56E1A0D646800F8F21F /* Settings.xib */,
 				11B7E5611A0D635C00F8F21F /* MainMenu */,
 				11B7E5761A0D649000F8F21F /* Utils.h */,
 				11B7E5771A0D649000F8F21F /* Utils.m */,
@@ -131,6 +130,7 @@
 				11B7E5791A0D655500F8F21F /* main.m */,
 				11C0847D1A0D57D80063B791 /* appcast.rss */,
 				1165850F1A0A523F005D5596 /* Info.plist */,
+				11B7E58E1A0E59E700F8F21F /* Settings.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -155,6 +155,9 @@
 		11B7E5601A0D635500F8F21F /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				11B7E56C1A0D646800F8F21F /* Settings.h */,
+				11B7E56D1A0D646800F8F21F /* Settings.m */,
+				11B7E56E1A0D646800F8F21F /* Settings.xib */,
 			);
 			name = Settings;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 				11C0847E1A0D57D80063B791 /* appcast.rss in Resources */,
 				116585161A0A523F005D5596 /* Images.xcassets in Resources */,
 				11B7E5751A0D648400F8F21F /* MainMenu.xib in Resources */,
+				11B7E58F1A0E59E700F8F21F /* Settings.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
