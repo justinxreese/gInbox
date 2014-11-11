@@ -32,11 +32,7 @@
                                 </connections>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
-                            <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW">
-                                <connections>
-                                    <action selector="openSettings:" target="MCO-2s-7LU" id="6NY-4X-Rer"/>
-                                </connections>
-                            </menuItem>
+                            <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW"/>
                             <menuItem title="Check for Updates..." id="5ms-Ir-NDj">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
