@@ -18,9 +18,9 @@
         rightPane.style.minWidth='100px';
         break;
     }
-    /*var body = document.querySelector('body');
+    var body = document.querySelector('body');
     body.style.borderStyle='solid';
     body.style.borderWidth='10px';
-    body.style.borderColor=color;*/
+    body.style.borderColor=color;
  }
 })();

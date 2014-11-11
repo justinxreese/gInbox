@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 
-@implementation AppDelegate
+@implementation AppDelegate1
 
     // Constants
     NSString *const WebURL = @"https://inbox.google.com";
@@ -96,6 +96,7 @@ decidePolicyForNewWindowAction:(NSDictionary*) actionInformation
             
             // after injecting methods, call them with appended parameters
             [scriptObject evaluateWebScript:[NSString stringWithFormat:@"updateHangoutsMode(%@);", [self getPreference:@"hangoutsMode"]]];
+            
         }
     }
     
@@ -123,9 +124,9 @@ decidePolicyForNewWindowAction:(NSDictionary*) actionInformation
 
 // open preferences window
 - (IBAction)openSettings:(id)senderId
-{
-    _settingsWindow = [[Settings alloc] initWithWindowNibName:@"Settings"];
-    [_settingsWindow showWindow:self];
+//{
+    //_settingsWindow = [[Settings alloc] initWithWindowNibName:@"Settings"];
+    //[_settingsWindow showWindow:self];
 }
 
 @end

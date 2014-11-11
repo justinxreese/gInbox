@@ -8,15 +8,14 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
             <connections>
-                <outlet property="delegate" destination="Voe-Tx-rLC" id="GzC-gU-4Uq"/>
+                <outlet property="delegate" destination="MCO-2s-7LU" id="HGs-Vh-Jbr"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
+        <customObject id="MCO-2s-7LU" userLabel="AppDelegate" customClass="AppDelegate" customModule="Inbox_by_Google" customModuleProvider="target">
             <connections>
-                <outlet property="webView" destination="sDI-uK-6ow" id="Ebp-d9-HRD"/>
-                <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
+                <outlet property="window" destination="QvC-M9-y7g" id="NPE-9G-dK5"/>
             </connections>
         </customObject>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
@@ -35,7 +34,7 @@
                             <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
                             <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW">
                                 <connections>
-                                    <action selector="openSettings:" target="Voe-Tx-rLC" id="Tk8-ew-oBU"/>
+                                    <action selector="openSettings:" target="MCO-2s-7LU" id="6NY-4X-Rer"/>
                                 </connections>
                             </menuItem>
                             <menuItem title="Check for Updates..." id="5ms-Ir-NDj">
@@ -680,7 +679,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <rect key="contentRect" x="280" y="77" width="1000" height="600"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1280" height="800"/>
-            <view key="contentView" wantsLayer="YES" id="EiT-Mj-1SZ">
+            <view key="contentView" wantsLayer="YES" id="EiT-Mj-1SZ" customClass="WebView">
                 <rect key="frame" x="0.0" y="0.0" width="1000" height="600"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
@@ -690,10 +689,9 @@
                             <nil key="identifier"/>
                         </webPreferences>
                         <connections>
-                            <outlet property="UIDelegate" destination="Voe-Tx-rLC" id="8Iy-3M-ozK"/>
-                            <outlet property="frameLoadDelegate" destination="Voe-Tx-rLC" id="5FS-Ht-NEL"/>
-                            <outlet property="policyDelegate" destination="Voe-Tx-rLC" id="G1u-rp-FV3"/>
-                            <outlet property="resourceLoadDelegate" destination="Voe-Tx-rLC" id="eDO-gz-ZS2"/>
+                            <outlet property="downloadDelegate" destination="FgR-q1-vI5" id="fmp-qw-Ejd"/>
+                            <outlet property="frameLoadDelegate" destination="FgR-q1-vI5" id="Oqu-UZ-rZp"/>
+                            <outlet property="resourceLoadDelegate" destination="FgR-q1-vI5" id="VFm-sQ-FCx"/>
                         </connections>
                     </webView>
                 </subviews>
@@ -703,8 +701,21 @@
                     <constraint firstItem="sDI-uK-6ow" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" id="rvi-AW-Hkd"/>
                     <constraint firstItem="sDI-uK-6ow" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" id="vgc-qs-3I7"/>
                 </constraints>
+                <connections>
+                    <outlet property="UIDelegate" destination="FgR-q1-vI5" id="0s6-gw-2kb"/>
+                    <outlet property="downloadDelegate" destination="FgR-q1-vI5" id="n28-d5-TaH"/>
+                    <outlet property="frameLoadDelegate" destination="FgR-q1-vI5" id="fe8-6U-1X0"/>
+                    <outlet property="policyDelegate" destination="FgR-q1-vI5" id="eH4-eP-dtR"/>
+                    <outlet property="resourceLoadDelegate" destination="FgR-q1-vI5" id="BF6-dO-hxz"/>
+                </connections>
             </view>
-            <point key="canvasLocation" x="-990" y="-657"/>
+            <point key="canvasLocation" x="-1184" y="-771"/>
         </window>
+        <customObject id="FgR-q1-vI5" customClass="WebViewController" customModule="Inbox_by_Google" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="EiT-Mj-1SZ" id="8sQ-dz-W5V"/>
+                <outlet property="webView" destination="EiT-Mj-1SZ" id="enV-sR-1Y8"/>
+            </connections>
+        </customObject>
     </objects>
 </document>

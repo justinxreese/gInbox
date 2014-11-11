@@ -8,16 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		110795C91A0BE63500B85DF4 /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = 110795C81A0BE63500B85DF4 /* Assets */; };
+		114C2EEE1A0FF1DA00BE97FB /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114C2EED1A0FF1DA00BE97FB /* main.swift */; };
 		116585161A0A523F005D5596 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 116585151A0A523F005D5596 /* Images.xcassets */; };
 		116585251A0A523F005D5596 /* gInboxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 116585241A0A523F005D5596 /* gInboxTests.m */; };
 		1165852F1A0A7C0A005D5596 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1165852E1A0A7C0A005D5596 /* WebKit.framework */; };
-		11B7E56F1A0D646800F8F21F /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B7E56D1A0D646800F8F21F /* Settings.m */; };
+		116BA11D1A0FCF36006CB899 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116BA11C1A0FCF36006CB899 /* Settings.swift */; };
+		116BA11F1A0FD630006CB899 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116BA11E1A0FD630006CB899 /* AppDelegate.swift */; };
+		11AA9DE11A11E1A500E90DD5 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AA9DE01A11E1A500E90DD5 /* Preferences.swift */; };
+		11AA9DE31A11EC4F00E90DD5 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AA9DE21A11EC4F00E90DD5 /* WebViewController.swift */; };
 		11B7E5701A0D646800F8F21F /* Settings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11B7E56E1A0D646800F8F21F /* Settings.xib */; };
-		11B7E5741A0D648400F8F21F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B7E5721A0D648400F8F21F /* AppDelegate.m */; };
 		11B7E5751A0D648400F8F21F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11B7E5731A0D648400F8F21F /* MainMenu.xib */; };
-		11B7E5781A0D649000F8F21F /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B7E5771A0D649000F8F21F /* Utils.m */; };
-		11B7E57A1A0D655500F8F21F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B7E5791A0D655500F8F21F /* main.m */; };
-		11B7E58F1A0E59E700F8F21F /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 11B7E58E1A0E59E700F8F21F /* Settings.plist */; };
 		11C084791A0D55BF0063B791 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11C084781A0D55BF0063B791 /* Sparkle.framework */; };
 		11C0847B1A0D56160063B791 /* Sparkle.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = 11C084781A0D55BF0063B791 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		11C0847E1A0D57D80063B791 /* appcast.rss in Resources */ = {isa = PBXBuildFile; fileRef = 11C0847D1A0D57D80063B791 /* appcast.rss */; };
@@ -49,6 +49,7 @@
 
 /* Begin PBXFileReference section */
 		110795C81A0BE63500B85DF4 /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Assets; path = gInbox/Assets; sourceTree = "<group>"; };
+		114C2EED1A0FF1DA00BE97FB /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		1165850B1A0A523F005D5596 /* Inbox by Google.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Inbox by Google.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1165850F1A0A523F005D5596 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		116585151A0A523F005D5596 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -56,16 +57,16 @@
 		116585231A0A523F005D5596 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		116585241A0A523F005D5596 /* gInboxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = gInboxTests.m; sourceTree = "<group>"; };
 		1165852E1A0A7C0A005D5596 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
-		11B7E56C1A0D646800F8F21F /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
-		11B7E56D1A0D646800F8F21F /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
+		116BA11C1A0FCF36006CB899 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		116BA11E1A0FD630006CB899 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		11AA9DE01A11E1A500E90DD5 /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		11AA9DE21A11EC4F00E90DD5 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		11B7E56E1A0D646800F8F21F /* Settings.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Settings.xib; sourceTree = "<group>"; };
 		11B7E5711A0D648400F8F21F /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		11B7E5721A0D648400F8F21F /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		11B7E5731A0D648400F8F21F /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		11B7E5761A0D649000F8F21F /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		11B7E5771A0D649000F8F21F /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
-		11B7E5791A0D655500F8F21F /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		11B7E58E1A0E59E700F8F21F /* Settings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Settings.plist; sourceTree = "<group>"; };
 		11C084781A0D55BF0063B791 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		11C0847D1A0D57D80063B791 /* appcast.rss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = appcast.rss; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -118,6 +119,7 @@
 				11B7E5611A0D635C00F8F21F /* MainMenu */,
 				11B7E5761A0D649000F8F21F /* Utils.h */,
 				11B7E5771A0D649000F8F21F /* Utils.m */,
+				11AA9DE01A11E1A500E90DD5 /* Preferences.swift */,
 				116585151A0A523F005D5596 /* Images.xcassets */,
 				1165850E1A0A523F005D5596 /* Supporting Files */,
 			);
@@ -127,10 +129,9 @@
 		1165850E1A0A523F005D5596 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				11B7E5791A0D655500F8F21F /* main.m */,
+				114C2EED1A0FF1DA00BE97FB /* main.swift */,
 				11C0847D1A0D57D80063B791 /* appcast.rss */,
 				1165850F1A0A523F005D5596 /* Info.plist */,
-				11B7E58E1A0E59E700F8F21F /* Settings.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -155,9 +156,8 @@
 		11B7E5601A0D635500F8F21F /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				11B7E56C1A0D646800F8F21F /* Settings.h */,
-				11B7E56D1A0D646800F8F21F /* Settings.m */,
 				11B7E56E1A0D646800F8F21F /* Settings.xib */,
+				116BA11C1A0FCF36006CB899 /* Settings.swift */,
 			);
 			name = Settings;
 			sourceTree = "<group>";
@@ -165,6 +165,8 @@
 		11B7E5611A0D635C00F8F21F /* MainMenu */ = {
 			isa = PBXGroup;
 			children = (
+				116BA11E1A0FD630006CB899 /* AppDelegate.swift */,
+				11AA9DE21A11EC4F00E90DD5 /* WebViewController.swift */,
 				11B7E5711A0D648400F8F21F /* AppDelegate.h */,
 				11B7E5721A0D648400F8F21F /* AppDelegate.m */,
 				11B7E5731A0D648400F8F21F /* MainMenu.xib */,
@@ -258,7 +260,6 @@
 				11C0847E1A0D57D80063B791 /* appcast.rss in Resources */,
 				116585161A0A523F005D5596 /* Images.xcassets in Resources */,
 				11B7E5751A0D648400F8F21F /* MainMenu.xib in Resources */,
-				11B7E58F1A0E59E700F8F21F /* Settings.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,10 +277,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11B7E5781A0D649000F8F21F /* Utils.m in Sources */,
-				11B7E5741A0D648400F8F21F /* AppDelegate.m in Sources */,
-				11B7E57A1A0D655500F8F21F /* main.m in Sources */,
-				11B7E56F1A0D646800F8F21F /* Settings.m in Sources */,
+				114C2EEE1A0FF1DA00BE97FB /* main.swift in Sources */,
+				116BA11F1A0FD630006CB899 /* AppDelegate.swift in Sources */,
+				116BA11D1A0FCF36006CB899 /* Settings.swift in Sources */,
+				11AA9DE31A11EC4F00E90DD5 /* WebViewController.swift in Sources */,
+				11AA9DE11A11E1A500E90DD5 /* Preferences.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,6 +384,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -390,9 +393,11 @@
 				);
 				INFOPLIST_FILE = gInbox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				OTHER_LDFLAGS = "-Wl,-rpath,@loader_path/../Frameworks";
 				PRODUCT_NAME = "Inbox by Google";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -400,6 +405,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -408,9 +414,10 @@
 				);
 				INFOPLIST_FILE = gInbox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				OTHER_LDFLAGS = "-Wl,-rpath,@loader_path/../Frameworks";
 				PRODUCT_NAME = "Inbox by Google";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};
