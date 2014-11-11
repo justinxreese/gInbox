@@ -63,7 +63,7 @@ class WebViewController: NSViewController, WKNavigationDelegate {
         listener.ignore()
     }
     
-    override func webView(sender: WebView!, didFinishLoadForFrame frame: WebFrame!) {
+    /*override func webView(sender: WebView!, didFinishLoadForFrame frame: WebFrame!) {
     }
     
     func consoleLog(message: String) {
@@ -98,7 +98,7 @@ class WebViewController: NSViewController, WKNavigationDelegate {
             return false
         }
         return true
-    }
+    }*/
     
     
 }
