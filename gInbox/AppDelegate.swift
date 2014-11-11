@@ -20,9 +20,9 @@ class AppDelegate : NSObject, NSApplicationDelegate {
         window.title = (NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleDisplayName") as String)
     }
     
-    @IBAction func openSettings(sender: AnyObject) {
-        settingsController.showWindow(sender)
-    }
+    //@IBAction func openSettings(sender: AnyObject) {
+    //    settingsController.showWindow(sender)
+    //}
     
     func applicationShouldHandleReopen(sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
         if flag {
