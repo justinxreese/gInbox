@@ -39,6 +39,9 @@
                             </menuItem>
                             <menuItem title="Check for Updates..." id="5ms-Ir-NDj">
                                 <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="checkForUpdates:" target="lSI-PI-UxI" id="nV8-XG-Q8C"/>
+                                </connections>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="wFC-TO-SCJ"/>
                             <menuItem title="Services" id="NMo-om-nkz">
@@ -689,9 +692,11 @@
                             <nil key="identifier"/>
                         </webPreferences>
                         <connections>
-                            <outlet property="downloadDelegate" destination="FgR-q1-vI5" id="fmp-qw-Ejd"/>
-                            <outlet property="frameLoadDelegate" destination="FgR-q1-vI5" id="Oqu-UZ-rZp"/>
-                            <outlet property="resourceLoadDelegate" destination="FgR-q1-vI5" id="VFm-sQ-FCx"/>
+                            <outlet property="UIDelegate" destination="EiT-Mj-1SZ" id="98C-S7-sPL"/>
+                            <outlet property="downloadDelegate" destination="FgR-q1-vI5" id="gII-zV-WED"/>
+                            <outlet property="frameLoadDelegate" destination="FgR-q1-vI5" id="nJG-vU-TqF"/>
+                            <outlet property="policyDelegate" destination="EiT-Mj-1SZ" id="8tn-qp-ftm"/>
+                            <outlet property="resourceLoadDelegate" destination="FgR-q1-vI5" id="MeD-IN-taQ"/>
                         </connections>
                     </webView>
                 </subviews>
@@ -702,11 +707,11 @@
                     <constraint firstItem="sDI-uK-6ow" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" id="vgc-qs-3I7"/>
                 </constraints>
                 <connections>
-                    <outlet property="UIDelegate" destination="FgR-q1-vI5" id="0s6-gw-2kb"/>
-                    <outlet property="downloadDelegate" destination="FgR-q1-vI5" id="n28-d5-TaH"/>
-                    <outlet property="frameLoadDelegate" destination="FgR-q1-vI5" id="fe8-6U-1X0"/>
-                    <outlet property="policyDelegate" destination="FgR-q1-vI5" id="eH4-eP-dtR"/>
-                    <outlet property="resourceLoadDelegate" destination="FgR-q1-vI5" id="BF6-dO-hxz"/>
+                    <outlet property="UIDelegate" destination="FgR-q1-vI5" id="K3I-4n-UAv"/>
+                    <outlet property="downloadDelegate" destination="FgR-q1-vI5" id="aDB-US-abQ"/>
+                    <outlet property="frameLoadDelegate" destination="FgR-q1-vI5" id="MeH-fT-QZm"/>
+                    <outlet property="policyDelegate" destination="FgR-q1-vI5" id="V6A-Aq-CZm"/>
+                    <outlet property="resourceLoadDelegate" destination="FgR-q1-vI5" id="vaQ-dB-zUd"/>
                 </connections>
             </view>
             <point key="canvasLocation" x="-1184" y="-771"/>
@@ -717,5 +722,6 @@
                 <outlet property="webView" destination="EiT-Mj-1SZ" id="enV-sR-1Y8"/>
             </connections>
         </customObject>
+        <customObject id="lSI-PI-UxI" userLabel="Updater" customClass="SUUpdater"/>
     </objects>
 </document>

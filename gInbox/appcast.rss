@@ -1,4 +1,4 @@
-<!--<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"  xmlns:dc="http://purl.org/dc/elements/1.1/">
     <channel>
         <title>gInbox Changelog</title>
@@ -6,13 +6,13 @@
         <description>gInbox changelog with update links.</description>
         <language>en</language>
         <item>
-            <title>Version 0.2.2</title>
-            <sparkle:minimumSystemVersion>10.8</sparkle:minimumSystemVersion>
+            <title>Version 0.2.3</title>
+            <sparkle:minimumSystemVersion>10.9</sparkle:minimumSystemVersion>
             <description>
                 <![CDATA[
                     <ul>
-                    <li>Added an updater</li>
-                    <li>Added control over the Hangouts messages in Inbox
+                    <li>Added an updater! You will be notified of app updates from now on.</li>
+                    <li>Bumped required OS version up to 10.9, as we are now using Swift. Sorry, old-OSers :(</li>
                     </ul>
                 ]]>
             </description>
@@ -20,4 +20,4 @@
             <enclosure url="https://github.com/chenasraf/gInbox/releases/download/0.2.2/gInbox-0.2.2.zip" sparkle:version="0.2.2" length="???" type="application/octet-stream" sparkle:dsaSignature="???" />
         </item>
     </channel>
-</rss>-->
+</rss>

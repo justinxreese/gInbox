@@ -30,7 +30,11 @@
 	<string>Copyright © 2014 Chen Asraf. All rights reserved.</string>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
+	<key>SUPublicDSAKeyFile</key>
+	<string>dsa_pub.pem</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
+	<key>SUFeedURL</key>
+	<string>https://raw.githubusercontent.com/chenasraf/gInbox/master/gInbox/appcast.rss</string>
 </dict>
 </plist>

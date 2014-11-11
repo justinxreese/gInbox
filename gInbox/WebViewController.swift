@@ -48,7 +48,7 @@ class WebViewController: NSViewController, WKNavigationDelegate {
             let hideHangouts:Bool = (Preferences.getInt("hangoutsMode") > 0)
             
             if (url.hasPrefix("#")) {
-                NSWorkspace.sharedWorkspace().openURL(NSURL(string: (actionInformation["WebActionOriginalURLKey"]?.absoluteString)!)!)
+                NSWorkspace.sharedWorkspace().openURL(NSURL(string: url)!)
                 listener.ignore()
             } else if hideHangouts && hangoutsNav {
                 listener.ignore()
@@ -56,6 +56,11 @@ class WebViewController: NSViewController, WKNavigationDelegate {
                 listener.use()
             }
         }
+    }
+    
+    override func webView(webView: WebView!, decidePolicyForNewWindowAction actionInformation: [NSObject : AnyObject]!, request: NSURLRequest!, newFrameName frameName: String!, decisionListener listener: WebPolicyDecisionListener!) {
+        NSWorkspace.sharedWorkspace().openURL(NSURL(string: (actionInformation["WebActionOriginalURLKey"]?.absoluteString)!)!)
+        listener.ignore()
     }
     
     override func webView(sender: WebView!, didFinishLoadForFrame frame: WebFrame!) {
@@ -66,23 +71,25 @@ class WebViewController: NSViewController, WKNavigationDelegate {
     }
     
     override func webView(sender: WebView!, didClearWindowObject windowObject: WebScriptObject!, forFrame frame: WebFrame!) {
-        let document:DOMDocument = frame.DOMDocument
-        let hangoutsMode: String? = Preferences.getString("hangoutsMode")
-        
-        windowObject.setValue(self, forKey: "gInbox")
-        windowObject.evaluateWebScript("console = { log: function(msg) { gInbox.consoleLog(msg); } }")
-        
-        let path = NSBundle.mainBundle().pathForResource("gInboxTweaks", ofType: "js", inDirectory: "Assets")
-        let jsString = String(contentsOfFile: path!, encoding: NSUTF8StringEncoding, error: nil)
-        let script = document.createElement("script")
-        let jsText = document.createTextNode(jsString)
-        let bodyEl = document.querySelector("body")
-        
-        script.setAttribute("type", value: "text/javascript")
-        script.appendChild(jsText)
-        bodyEl.appendChild(script)
-        
-        windowObject.evaluateWebScript(String(format: "console.log('test'); hangoutsMode(%@)", hangoutsMode!))
+        if (webView.mainFrameDocument != nil) { // && frame.DOMDocument == webView.mainFrameDocument) {
+            let document:DOMDocument = webView.mainFrameDocument
+            let hangoutsMode: String? = Preferences.getString("hangoutsMode")
+            let windowScriptObject = webView.windowScriptObject;
+            windowScriptObject.setValue(self, forKey: "gInbox")
+            windowScriptObject.evaluateWebScript("console = { log: function(msg) { gInbox.consoleLog(msg); } }")
+            
+            let path = NSBundle.mainBundle().pathForResource("gInboxTweaks", ofType: "js", inDirectory: "Assets")
+            let jsString = String(contentsOfFile: path!, encoding: NSUTF8StringEncoding, error: nil)
+            let script = document.createElement("script")
+            let jsText = document.createTextNode(jsString)
+            let bodyEl = document.getElementsByName("body").item(0)
+            
+            script.setAttribute("type", value: "text/javascript")
+            script.appendChild(jsText)
+            bodyEl?.appendChild(script)
+            
+            windowScriptObject.evaluateWebScript(String(format: "console.log('test'); hangoutsMode(%@)", hangoutsMode!))
+        }
     }
     
     
