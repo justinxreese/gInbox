@@ -63,14 +63,14 @@ class WebViewController: NSViewController, WKNavigationDelegate {
         listener.ignore()
     }
     
-    override func webView(sender: WebView!, didFinishLoadForFrame frame: WebFrame!) {
-        /*let path = NSBundle.mainBundle().pathForResource("gInboxTweaks", ofType: "js", inDirectory: "Assets")
+    /*override func webView(sender: WebView!, didFinishLoadForFrame frame: WebFrame!) {
+        let path = NSBundle.mainBundle().pathForResource("gInboxTweaks", ofType: "js", inDirectory: "Assets")
         let jsString = String(contentsOfFile: path!, encoding: NSUTF8StringEncoding, error: nil)
         let hangoutsMode: String? = Preferences.getString("hangoutsMode")
         
         webView.stringByEvaluatingJavaScriptFromString(jsString)
-        webView.stringByEvaluatingJavaScriptFromString(String(format: "console.log('test'); updateHangoutsMode(%@)", hangoutsMode!))*/
-    }
+        webView.stringByEvaluatingJavaScriptFromString(String(format: "console.log('test'); updateHangoutsMode(%@)", hangoutsMode!))
+    }*/
     
     func consoleLog(message: String) {
         NSLog("[JS] -> %@", message)
