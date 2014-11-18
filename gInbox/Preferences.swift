@@ -21,4 +21,8 @@ class Preferences {
     class func getString(key: String) -> String? {
         return getDefaults().stringForKey(key)
     }
+    
+    class func getFloat(key: String) -> Float? {
+        return getDefaults().floatForKey(key)
+    }
 }

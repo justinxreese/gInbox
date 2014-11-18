@@ -677,7 +677,7 @@
         <window title="gInbox" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <rect key="contentRect" x="280" y="77" width="1000" height="600"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="800"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
             <view key="contentView" wantsLayer="YES" id="EiT-Mj-1SZ" customClass="WebView">
                 <rect key="frame" x="0.0" y="0.0" width="1000" height="600"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -703,11 +703,8 @@
                     <constraint firstItem="sDI-uK-6ow" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" id="vgc-qs-3I7"/>
                 </constraints>
                 <connections>
-                    <outlet property="UIDelegate" destination="FgR-q1-vI5" id="K3I-4n-UAv"/>
-                    <outlet property="downloadDelegate" destination="FgR-q1-vI5" id="aDB-US-abQ"/>
                     <outlet property="frameLoadDelegate" destination="FgR-q1-vI5" id="MeH-fT-QZm"/>
                     <outlet property="policyDelegate" destination="FgR-q1-vI5" id="V6A-Aq-CZm"/>
-                    <outlet property="resourceLoadDelegate" destination="FgR-q1-vI5" id="vaQ-dB-zUd"/>
                 </connections>
             </view>
             <point key="canvasLocation" x="-1184" y="-771"/>

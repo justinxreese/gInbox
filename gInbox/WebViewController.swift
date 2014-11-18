@@ -43,7 +43,7 @@ class WebViewController: NSViewController, WKNavigationDelegate {
     override func webView(sender: WebView!, decidePolicyForNavigationAction actionInformation: [NSObject : AnyObject]!, request: NSURLRequest!, frame: WebFrame!, decisionListener listener: WebPolicyDecisionListener!) {
         
         if actionInformation["WebActionOriginalURLKey"] != nil {
-            let url:String = (actionInformation["WebActionOriginalURLKey"]?.absoluteString as String?)!
+            let url = (actionInformation["WebActionOriginalURLKey"]?.absoluteString as String?)!
             let hangoutsNav:Bool = (url.hasPrefix("https://plus.google.com/hangouts/") || url.hasPrefix("https://talkgadget.google.com/u/"))
             let hideHangouts:Bool = (Preferences.getInt("hangoutsMode") > 0)
             
@@ -63,7 +63,13 @@ class WebViewController: NSViewController, WKNavigationDelegate {
         listener.ignore()
     }
     
-    /*override func webView(sender: WebView!, didFinishLoadForFrame frame: WebFrame!) {
+    override func webView(sender: WebView!, didFinishLoadForFrame frame: WebFrame!) {
+        /*let path = NSBundle.mainBundle().pathForResource("gInboxTweaks", ofType: "js", inDirectory: "Assets")
+        let jsString = String(contentsOfFile: path!, encoding: NSUTF8StringEncoding, error: nil)
+        let hangoutsMode: String? = Preferences.getString("hangoutsMode")
+        
+        webView.stringByEvaluatingJavaScriptFromString(jsString)
+        webView.stringByEvaluatingJavaScriptFromString(String(format: "console.log('test'); updateHangoutsMode(%@)", hangoutsMode!))*/
     }
     
     func consoleLog(message: String) {
@@ -71,6 +77,7 @@ class WebViewController: NSViewController, WKNavigationDelegate {
     }
     
     override func webView(sender: WebView!, didClearWindowObject windowObject: WebScriptObject!, forFrame frame: WebFrame!) {
+        
         if (webView.mainFrameDocument != nil) { // && frame.DOMDocument == webView.mainFrameDocument) {
             let document:DOMDocument = webView.mainFrameDocument
             let hangoutsMode: String? = Preferences.getString("hangoutsMode")
@@ -88,7 +95,10 @@ class WebViewController: NSViewController, WKNavigationDelegate {
             script.appendChild(jsText)
             bodyEl?.appendChild(script)
             
-            windowScriptObject.evaluateWebScript(String(format: "console.log('test'); hangoutsMode(%@)", hangoutsMode!))
+            webView.stringByEvaluatingJavaScriptFromString(jsString)
+            webView.stringByEvaluatingJavaScriptFromString(String(format: "console.log('test'); updateHangoutsMode(%@)", hangoutsMode!))
+            
+            windowScriptObject.evaluateWebScript(String(format: "console.log('test'); updateHangoutsMode(%@)", hangoutsMode!))
         }
     }
     
@@ -98,7 +108,7 @@ class WebViewController: NSViewController, WKNavigationDelegate {
             return false
         }
         return true
-    }*/
+    }
     
     
 }
