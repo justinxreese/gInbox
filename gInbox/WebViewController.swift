@@ -45,7 +45,8 @@ class WebViewController: NSViewController, WKNavigationDelegate {
         if actionInformation["WebActionOriginalURLKey"] != nil {
             let url = (actionInformation["WebActionOriginalURLKey"]?.absoluteString as String?)!
             let hangoutsNav:Bool = (url.hasPrefix("https://plus.google.com/hangouts/") || url.hasPrefix("https://talkgadget.google.com/u/"))
-            let hideHangouts:Bool = (Preferences.getInt("hangoutsMode") > 0)
+            //let hideHangouts:Bool = (Preferences.getInt("hangoutsMode") > 0)
+            let hideHangouts:Bool = false
             
             if (url.hasPrefix("#")) {
                 NSWorkspace.sharedWorkspace().openURL(NSURL(string: url)!)
