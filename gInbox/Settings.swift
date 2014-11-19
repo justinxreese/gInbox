@@ -29,4 +29,8 @@ public class Settings : NSWindowController, NSWindowDelegate {
         webView.customUserAgent = webUA
         webView.mainFrame.reload()
     }
+    
+    @IBAction func resetPrefsToDefault(sender: AnyObject?) {
+        Preferences.clearDefaults()
+    }
 }

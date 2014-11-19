@@ -127,8 +127,4 @@ class WebViewController: NSViewController, WKNavigationDelegate {
         return true
     }
     
-    func reloadWebView(webView: WebView!) {
-        webView.mainFrame?.reload()
-    }
-    
 }

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		110795C91A0BE63500B85DF4 /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = 110795C81A0BE63500B85DF4 /* Assets */; };
 		1112A9361A1CF41400E4F882 /* Defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1112A9351A1CF41400E4F882 /* Defaults.plist */; };
 		114C2EEE1A0FF1DA00BE97FB /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114C2EED1A0FF1DA00BE97FB /* main.swift */; };
 		116585161A0A523F005D5596 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 116585151A0A523F005D5596 /* Images.xcassets */; };
@@ -21,6 +20,7 @@
 		11B7E5751A0D648400F8F21F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11B7E5731A0D648400F8F21F /* MainMenu.xib */; };
 		11C084791A0D55BF0063B791 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11C084781A0D55BF0063B791 /* Sparkle.framework */; };
 		11C0847B1A0D56160063B791 /* Sparkle.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = 11C084781A0D55BF0063B791 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		11E9F0021A1D43250078D6F2 /* gInboxTweaks.js in Resources */ = {isa = PBXBuildFile; fileRef = 11E9F0011A1D43250078D6F2 /* gInboxTweaks.js */; };
 		11EE37C81A1256B500782865 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 11EE37C71A1256B500782865 /* dsa_pub.pem */; };
 /* End PBXBuildFile section */
 
@@ -49,7 +49,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		110795C81A0BE63500B85DF4 /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Assets; path = gInbox/Assets; sourceTree = "<group>"; };
 		1112A9351A1CF41400E4F882 /* Defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Defaults.plist; sourceTree = "<group>"; };
 		114C2EED1A0FF1DA00BE97FB /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		1165850B1A0A523F005D5596 /* Inbox by Gmail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Inbox by Gmail.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,9 +64,8 @@
 		11AA9DE21A11EC4F00E90DD5 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		11B7E56E1A0D646800F8F21F /* Settings.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Settings.xib; sourceTree = "<group>"; };
 		11B7E5731A0D648400F8F21F /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
-		11B7E5761A0D649000F8F21F /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
-		11B7E5771A0D649000F8F21F /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		11C084781A0D55BF0063B791 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
+		11E9F0011A1D43250078D6F2 /* gInboxTweaks.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = gInboxTweaks.js; sourceTree = "<group>"; };
 		11EE37C71A1256B500782865 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,7 +93,6 @@
 			isa = PBXGroup;
 			children = (
 				11C084781A0D55BF0063B791 /* Sparkle.framework */,
-				110795C81A0BE63500B85DF4 /* Assets */,
 				1165852E1A0A7C0A005D5596 /* WebKit.framework */,
 				1165850D1A0A523F005D5596 /* gInbox */,
 				116585211A0A523F005D5596 /* gInboxTests */,
@@ -115,10 +112,9 @@
 		1165850D1A0A523F005D5596 /* gInbox */ = {
 			isa = PBXGroup;
 			children = (
+				11E9F0001A1D42E80078D6F2 /* Assets */,
 				11B7E5601A0D635500F8F21F /* Settings */,
 				11B7E5611A0D635C00F8F21F /* MainMenu */,
-				11B7E5761A0D649000F8F21F /* Utils.h */,
-				11B7E5771A0D649000F8F21F /* Utils.m */,
 				11AA9DE01A11E1A500E90DD5 /* Preferences.swift */,
 				116585151A0A523F005D5596 /* Images.xcassets */,
 				1165850E1A0A523F005D5596 /* Supporting Files */,
@@ -171,6 +167,14 @@
 				11B7E5731A0D648400F8F21F /* MainMenu.xib */,
 			);
 			name = MainMenu;
+			sourceTree = "<group>";
+		};
+		11E9F0001A1D42E80078D6F2 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				11E9F0011A1D43250078D6F2 /* gInboxTweaks.js */,
+			);
+			name = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,10 +258,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11E9F0021A1D43250078D6F2 /* gInboxTweaks.js in Resources */,
 				11B7E5701A0D646800F8F21F /* Settings.xib in Resources */,
 				11EE37C81A1256B500782865 /* dsa_pub.pem in Resources */,
 				1112A9361A1CF41400E4F882 /* Defaults.plist in Resources */,
-				110795C91A0BE63500B85DF4 /* Assets in Resources */,
 				116585161A0A523F005D5596 /* Images.xcassets in Resources */,
 				11B7E5751A0D648400F8F21F /* MainMenu.xib in Resources */,
 			);
