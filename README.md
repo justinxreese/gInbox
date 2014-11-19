@@ -1,6 +1,8 @@
 gInbox
 ======
 
+![Inbox by Gmail](http://i.imgur.com/ZxaChmj.png)
+
 gInbox is a wrapper made for Mac around Inbox by Gmail.
 
 This eliminates your need to use a tab on Chrome to make it work.
