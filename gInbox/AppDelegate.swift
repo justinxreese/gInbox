@@ -14,14 +14,6 @@ import AppKit
 class AppDelegate : NSObject, NSApplicationDelegate {
     
     @IBOutlet var window: NSWindow!
-
-    func applicationWillFinishLaunching(notification: NSNotification) {
-        Preferences.clearDefaults()
-    }
-    
-    func applicationDidFinishLaunching(notification: NSNotification) {
-        Preferences.clearDefaults()
-    }
     
     func applicationShouldHandleReopen(sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
         if flag {
