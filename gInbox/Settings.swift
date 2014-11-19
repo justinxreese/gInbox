@@ -7,10 +7,26 @@
 //
 
 import Foundation
+import WebKit
 import AppKit
 
-public class Settings : NSWindowController {
-    override public func windowDidLoad() {
-        
+public class Settings : NSWindowController, NSWindowDelegate {
+    
+    lazy var webViewController = WebViewController()
+    var webView: WebView!
+    
+    public override func showWindow(sender: AnyObject?) {
+        super.showWindow(sender)
+    }
+    
+    public func showWindow(sender: AnyObject?, webView:WebView!) {
+        super.showWindow(sender)
+        self.webView = webView
+    }
+    
+    public func windowWillClose(notification: NSNotification) {
+        var webUA = Preferences.getString("userAgentString")
+        webView.customUserAgent = webUA
+        webView.mainFrame.reload()
     }
 }

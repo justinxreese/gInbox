@@ -14,17 +14,27 @@ import Cocoa
 class WebViewController: NSViewController, WKNavigationDelegate {
     
     @IBOutlet weak var webView: WebView!
+    let settingsController = Settings(windowNibName: "Settings")
     
     // constants
     let webUrl = "https://inbox.google.com"
-    let webUA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.111 Safari/537.36"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let request = NSURLRequest(URL: NSURL(string: webUrl)!)
+        
+        if (!Preferences.getBool("afterFirstLaunch")!) {
+            Preferences.clearDefaults()
+        }
+        
+        var webUA = Preferences.getString("userAgentString")
         webView.customUserAgent = webUA
         webView.mainFrame.loadRequest(request)
+    }
+    
+    @IBAction func openSettings(sender: AnyObject) {
+        settingsController.showWindow(sender, webView: webView)
     }
     
     func webView(sender: WKWebView,
@@ -45,8 +55,7 @@ class WebViewController: NSViewController, WKNavigationDelegate {
         if actionInformation["WebActionOriginalURLKey"] != nil {
             let url = (actionInformation["WebActionOriginalURLKey"]?.absoluteString as String?)!
             let hangoutsNav:Bool = (url.hasPrefix("https://plus.google.com/hangouts/") || url.hasPrefix("https://talkgadget.google.com/u/"))
-            //let hideHangouts:Bool = (Preferences.getInt("hangoutsMode") > 0)
-            let hideHangouts:Bool = false
+            let hideHangouts:Bool = (Preferences.getInt("hangoutsMode") > 0)
             
             if (url.hasPrefix("#")) {
                 NSWorkspace.sharedWorkspace().openURL(NSURL(string: url)!)
@@ -103,6 +112,13 @@ class WebViewController: NSViewController, WKNavigationDelegate {
         }
     }
     
+    override func webView(sender: WebView!, resource identifier: AnyObject!, willSendRequest request: NSURLRequest!, redirectResponse: NSURLResponse!, fromDataSource dataSource: WebDataSource!) -> NSURLRequest! {
+        if (request.cachePolicy != NSURLRequestCachePolicy.ReloadIgnoringLocalCacheData) {
+            return NSURLRequest(URL: request.URL, cachePolicy: NSURLRequestCachePolicy.ReloadIgnoringLocalCacheData, timeoutInterval: request.timeoutInterval)
+        }
+        return request
+    }
+    
     
     func isSelectorExcludedFromWebScript(selector: Selector) -> Bool {
         if selector == Selector("consoleLog") {
@@ -111,5 +127,8 @@ class WebViewController: NSViewController, WKNavigationDelegate {
         return true
     }
     
+    func reloadWebView(webView: WebView!) {
+        webView.mainFrame?.reload()
+    }
     
 }

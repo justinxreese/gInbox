@@ -14,6 +14,15 @@ class Preferences {
         return NSUserDefaults.standardUserDefaults()
     }
     
+    class func clearDefaults() -> Void {
+        let path                = NSBundle.mainBundle().pathForResource("Defaults", ofType: "plist")!
+        let dic                 = NSDictionary(contentsOfFile: path)!
+        let productIdentifier   = NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleIdentifier") as String
+        
+        getDefaults().removePersistentDomainForName(productIdentifier)
+        getDefaults().registerDefaults(dic)
+    }
+    
     class func getInt(key: String) -> Int? {
         return getDefaults().integerForKey(key)
     }
@@ -25,4 +34,9 @@ class Preferences {
     class func getFloat(key: String) -> Float? {
         return getDefaults().floatForKey(key)
     }
+    
+    class func getBool(key: String) -> Bool? {
+        return getDefaults().boolForKey(key)
+    }
+    
 }

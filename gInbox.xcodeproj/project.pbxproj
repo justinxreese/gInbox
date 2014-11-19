@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		110795C91A0BE63500B85DF4 /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = 110795C81A0BE63500B85DF4 /* Assets */; };
+		1112A9361A1CF41400E4F882 /* Defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1112A9351A1CF41400E4F882 /* Defaults.plist */; };
 		114C2EEE1A0FF1DA00BE97FB /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114C2EED1A0FF1DA00BE97FB /* main.swift */; };
 		116585161A0A523F005D5596 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 116585151A0A523F005D5596 /* Images.xcassets */; };
 		116585251A0A523F005D5596 /* gInboxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 116585241A0A523F005D5596 /* gInboxTests.m */; };
@@ -49,6 +50,7 @@
 
 /* Begin PBXFileReference section */
 		110795C81A0BE63500B85DF4 /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Assets; path = gInbox/Assets; sourceTree = "<group>"; };
+		1112A9351A1CF41400E4F882 /* Defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Defaults.plist; sourceTree = "<group>"; };
 		114C2EED1A0FF1DA00BE97FB /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		1165850B1A0A523F005D5596 /* Inbox by Gmail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Inbox by Gmail.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1165850F1A0A523F005D5596 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -62,8 +64,6 @@
 		11AA9DE01A11E1A500E90DD5 /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		11AA9DE21A11EC4F00E90DD5 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		11B7E56E1A0D646800F8F21F /* Settings.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Settings.xib; sourceTree = "<group>"; };
-		11B7E5711A0D648400F8F21F /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		11B7E5721A0D648400F8F21F /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		11B7E5731A0D648400F8F21F /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		11B7E5761A0D649000F8F21F /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		11B7E5771A0D649000F8F21F /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
@@ -132,6 +132,7 @@
 				11EE37C71A1256B500782865 /* dsa_pub.pem */,
 				114C2EED1A0FF1DA00BE97FB /* main.swift */,
 				1165850F1A0A523F005D5596 /* Info.plist */,
+				1112A9351A1CF41400E4F882 /* Defaults.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -156,8 +157,8 @@
 		11B7E5601A0D635500F8F21F /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				11B7E56E1A0D646800F8F21F /* Settings.xib */,
 				116BA11C1A0FCF36006CB899 /* Settings.swift */,
+				11B7E56E1A0D646800F8F21F /* Settings.xib */,
 			);
 			name = Settings;
 			sourceTree = "<group>";
@@ -167,8 +168,6 @@
 			children = (
 				116BA11E1A0FD630006CB899 /* AppDelegate.swift */,
 				11AA9DE21A11EC4F00E90DD5 /* WebViewController.swift */,
-				11B7E5711A0D648400F8F21F /* AppDelegate.h */,
-				11B7E5721A0D648400F8F21F /* AppDelegate.m */,
 				11B7E5731A0D648400F8F21F /* MainMenu.xib */,
 			);
 			name = MainMenu;
@@ -257,6 +256,7 @@
 			files = (
 				11B7E5701A0D646800F8F21F /* Settings.xib in Resources */,
 				11EE37C81A1256B500782865 /* dsa_pub.pem in Resources */,
+				1112A9361A1CF41400E4F882 /* Defaults.plist in Resources */,
 				110795C91A0BE63500B85DF4 /* Assets in Resources */,
 				116585161A0A523F005D5596 /* Images.xcassets in Resources */,
 				11B7E5751A0D648400F8F21F /* MainMenu.xib in Resources */,

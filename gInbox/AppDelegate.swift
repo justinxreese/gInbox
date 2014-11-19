@@ -13,15 +13,14 @@ import AppKit
 
 class AppDelegate : NSObject, NSApplicationDelegate {
     
-    lazy var settingsController = NSWindowController(windowNibName: "Settings")
     @IBOutlet var window: NSWindow!
 
-    func applicationDidFinishLaunching(notification: NSNotification) {
-        window.title = (NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleDisplayName") as String)
+    func applicationWillFinishLaunching(notification: NSNotification) {
+        Preferences.clearDefaults()
     }
     
-    @IBAction func openSettings(sender: AnyObject) {
-        settingsController.showWindow(sender)
+    func applicationDidFinishLaunching(notification: NSNotification) {
+        Preferences.clearDefaults()
     }
     
     func applicationShouldHandleReopen(sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {

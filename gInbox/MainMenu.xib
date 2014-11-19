@@ -13,7 +13,7 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <customObject id="MCO-2s-7LU" userLabel="AppDelegate" customClass="AppDelegate" customModule="Inbox_by_Google" customModuleProvider="target">
+        <customObject id="MCO-2s-7LU" userLabel="AppDelegate" customClass="AppDelegate" customModule="Inbox_by_Gmail" customModuleProvider="target">
             <connections>
                 <outlet property="window" destination="QvC-M9-y7g" id="NPE-9G-dK5"/>
             </connections>
@@ -34,7 +34,7 @@
                             <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
                             <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW">
                                 <connections>
-                                    <action selector="openSettings:" target="MCO-2s-7LU" id="rla-4q-pYf"/>
+                                    <action selector="openSettings:" target="FgR-q1-vI5" id="DFZ-uw-aTG"/>
                                 </connections>
                             </menuItem>
                             <menuItem title="Check for Updates..." id="5ms-Ir-NDj">
@@ -678,7 +678,7 @@
                 </menuItem>
             </items>
         </menu>
-        <window title="gInbox" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
+        <window title="Inbox for Gmail" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <rect key="contentRect" x="280" y="77" width="1000" height="600"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1280" height="800"/>
@@ -713,7 +713,7 @@
             </view>
             <point key="canvasLocation" x="-1184" y="-771"/>
         </window>
-        <customObject id="FgR-q1-vI5" customClass="WebViewController" customModule="Inbox_by_Google" customModuleProvider="target">
+        <customObject id="FgR-q1-vI5" customClass="WebViewController" customModule="Inbox_by_Gmail" customModuleProvider="target">
             <connections>
                 <outlet property="view" destination="EiT-Mj-1SZ" id="8sQ-dz-W5V"/>
                 <outlet property="webView" destination="EiT-Mj-1SZ" id="enV-sR-1Y8"/>
